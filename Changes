@@ -1,0 +1,6 @@
+Revision history for Perl extension IO::Epoll::Sugar.
+
+0.01  Wed Dec  5 17:38:16 2012
+	- original version; created by h2xs 1.23 with options
+		-AX IO::Epoll::Sugar
+

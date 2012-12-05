@@ -1,0 +1,50 @@
+=head1 NAME
+
+IO::Epoll::Sugar
+
+=head1 DESCRIPTION
+
+There's sugar for a perl package IO::Epoll
+
+=head1 SYNOPSIS
+
+    use IO::Epoll::Sugar;
+    
+    my $epoll = IO::Epoll::Sugar->new();
+    $epoll->add_in($some_fd);
+    my ($read, $write, $delfno) = $epoll->events($wait_time);
+    unless (defined $read) {
+        die "something wrong with epoll";
+    }
+    for (@$read) {
+        # $_ is a file descriptor
+        ...some..
+    }
+
+=head1 METHODS
+
+=over 4
+
+=item *
+
+add_in, add_out, add_inout
+
+=item *
+
+del
+
+=item *
+
+mod_to_in, mod_to_out, mod_to_inout
+
+=item *
+
+exists
+
+=back
+        
+=head1 AUTHOR
+
+mr.Rico <catamoose at yandex.ru>
+
+=cut
